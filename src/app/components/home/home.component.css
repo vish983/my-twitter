@@ -1,0 +1,16 @@
+/* .textSize{
+    font-size: 70px;
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1000px) { 
+    /* tablet */
+    /* .textSize{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-device-width: 480px) { 
+    /* mobile */
+    /* .textSize{
+        font-size: 12px;
+    }
+} */ 
