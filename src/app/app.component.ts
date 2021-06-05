@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-twitter';
-  constructor() {
-    
+  isAuthorisedUser = false;
+  constructor(private router: Router) {
+    if (this.isAuthorisedUser) {
+
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 }
