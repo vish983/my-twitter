@@ -1,0 +1,12 @@
+.loginb{
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.buttonlog{
+    width: 30%;
+    border-radius: 30px;
+    background-color: #1DA1F2;
+    color: white;
+}

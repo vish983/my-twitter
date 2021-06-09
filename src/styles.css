@@ -9,7 +9,7 @@
 }
 .brand-bg{
     background-color: var(--brandBlueColor);
-    color: white;
+    
 }
 .brand-border{
     border: 1px solid var(--brandBlueColor);

@@ -1,2 +1,27 @@
-<p>login works!</p>
-<a routerLink="/signup" href>signip</a>
+
+<div class="row mx-0 brand-bg justify-content-center align-items-center " style="height:100vh;">
+    <div class="col-11 col-md-8 col-lg-4 bg-light loginb">
+     <i class="fa fa-twitter brand-text  fa-2x"></i>
+        <h2> <b>Log in to my Twitter</b></h2>
+        <form [formGroup]= 'loginPage' (ngSubmit)="onSubmitHandler()" novalidate>
+            <div>
+                <mat-form-field appearance= 'outline'>
+                    <mat-label>User Name</mat-label>
+                    <input matInput formControlName = 'username' >
+                </mat-form-field>
+                <div>
+                    <mat-form-field appearance= 'outline'>
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" formControlName = 'password' >
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button type="submit" class="buttonlog">Log In</button>
+                </div>
+            </div>
+        </form>
+        <div class="m-3">
+        <a routerLink="/signup" href>Signup for Twitter </a>
+        </div>
+    </div>
+</div>
