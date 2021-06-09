@@ -1,1 +1,71 @@
-<p>signup works!</p>
+<div class="row mx-0 brand-bg justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-11 col-md-9 col-lg-5" style="max-height: 90vh;overflow-y: auto">
+        <form [formGroup] = 'signupform'>
+           
+            <div class="row mx-0 signupbox">
+                <div class="col-12 h1 brand-text pb-2">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </div>
+                <mat-divider class="bg-dark"></mat-divider>
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline' class="w-100">
+                        <mat-label> First Name </mat-label>
+                        <input matInput type="text" formControlName= 'firstname' >
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline' class="w-100">
+                        <mat-label> Last Name </mat-label>
+                        <input matInput type="text" formControlName= 'lastname' >
+                    </mat-form-field>
+                </div>
+            
+               <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline' class="w-100">
+                        <mat-label> Email </mat-label>
+                        <input matInput type="email" formControlName= 'email' >
+                    </mat-form-field>
+               </div>
+               
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline'  class="w-100">
+                        <mat-label> Phone </mat-label>
+                        <input matInput formControlName= 'phone' >
+                    </mat-form-field>
+                </div>
+               
+               <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline' class="w-100">
+                        <mat-label> Password </mat-label>
+                        <input matInput type="Password" formControlName= 'password'>
+                    </mat-form-field>
+               </div>
+               <div class="col-12 col-md-6">
+                    <mat-form-field appearance = 'outline' class="w-100">
+                        <mat-label>Confirm Password </mat-label>
+                        <input matInput type="Password" formControlName= 'confirmpassword' >
+                    </mat-form-field>
+               </div>
+               <div class="col-12 col-md-6">
+                  
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Date of birth</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName = 'date'>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    
+                    
+               </div>
+               <div class="col-12">
+                <div><button mat-raised-button type="submit" class="signupButton">Sign Up</button></div>
+               </div>
+               <div class="col-12 my-2">
+                    <a href="" routerLink="/login">Already has an account? LOG IN</a>
+               </div>
+               
+            </div>
+           
+        </form>
+    </div>
+</div>
