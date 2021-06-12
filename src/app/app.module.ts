@@ -21,6 +21,17 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+import { ExploreComponent } from './components/explore/explore.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { MessageComponent } from './components/message/message.component';
+import { BookmarkComponent } from './components/bookmark/bookmark.component';
+import { ListComponent } from './components/list/list.component';
+import { ProfileComponent } from './profile/profile.component';
+import { TweetComponent } from './tweet/tweet.component';
+import { CreateTweetComponent } from './create-tweet/create-tweet.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -34,7 +45,15 @@ import { HttpClientModule } from '@angular/common/http';
     AlbumComponent,
     LoginComponent,
     SignupComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ExploreComponent,
+    NotificationComponent,
+    MessageComponent,
+    BookmarkComponent,
+    ListComponent,
+    ProfileComponent,
+    TweetComponent,
+    CreateTweetComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +67,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatNativeDateModule,
     MatDividerModule,
     HttpClientModule,
+    MatMenuModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

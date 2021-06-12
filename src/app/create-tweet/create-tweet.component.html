@@ -1,0 +1,37 @@
+<div class="row mx-0 bg-white">
+     <div class="col-12 px-0">
+        <div class="d-flex p-3">
+            <div>
+               <img class="rounded-circle" width="50" height="50" src="../../assets/images/manimage.jpg" alt="">
+            </div>
+            <div class="ml-3">
+                <form [formGroup] = 'tweetForm'>
+               <div class="row mx-0">
+                  
+                        <div class="col-12">
+                            <mat-form-field class="w-100" appearance = 'legacy'>
+                                <mat-label> What's happening</mat-label>
+                                <textarea matInput maxlength="140" formControlName = "tweet" (ngModelChange)="chnageFun($event)"  placeholder="What's happening" ></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-8">
+                            <ul class="list-inline">
+                                <li class="list-inline-item" *ngFor="let item of icon"> 
+                                    <button type="button" class="tweetitem"><i class="fa fa-{{item}}"></i></button>
+                                </li>
+                                <li  class="list-inline-item ml-3">
+                                    <mat-progress-spinner  diameter="25" [value]='progress' [mode]="mode" [color] = 'color'></mat-progress-spinner>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            
+                            <button mat-raised-button class="tweetbutton" (click)="tweetpost()"  [disabled]="!tweetForm.valid">Tweet</button>
+                        </div>
+               
+               </div>
+               </form>
+           </div>
+        </div> 
+     </div>
+</div>

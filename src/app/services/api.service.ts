@@ -9,4 +9,9 @@ export class ApiService {
   allUser = () => {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+
+  // getting posts
+  getAllPost = () => {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
+  }
 }

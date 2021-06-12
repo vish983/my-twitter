@@ -1,14 +1,32 @@
 
-<div class="row mx-0" *ngIf="isAuthorisedUser">
-    <div class="col-3">
-        <app-left-panel></app-left-panel>
-    </div>
-    <div class="col-6">
-        <router-outlet></router-outlet>
-    </div>
-    <div class="col-3">
-        <app-right-panel></app-right-panel>
-    </div>
+<div class="row mx-0" *ngIf="isAuthorisedUser"> 
+   <div class="col-12 bg-white" style="position: sticky;top:0;z-index: 10;">
+       <div class="row mx-0">
+        <div class="col-3 py-3 pl-xl-5">
+            <i class="fa fa-twitter fa-2x pl-4 ml-3 brand-text"></i>
+        </div>
+        <div class="col-6 p-3 text-left home px-0 border">
+            <span class="pl-3 text-capitalize">{{currentUrl}}</span>
+         </div>
+        <div class="col-3">
+            <i class="fa fa-search position-absolute text-secondary mt-4 fa-lg ml-2 pt-1"></i>
+            <input class="my-1 pl-5 pr-2 py-2 border" style="border-radius: 20px;" placeholder="Search" />
+        </div>
+       </div>
+   </div>
+   <div class="col-12">
+       <div class="row mx-0" >
+        <div class="col-3">
+            <app-left-panel></app-left-panel>
+        </div>
+        <div class="col-6 px-0 border-left border-right">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-3">
+            <app-right-panel></app-right-panel>
+        </div>
+       </div>
+   </div>
 </div>
 <div class="row mx-0" *ngIf="!isAuthorisedUser">
     <div class="col-12 px-0">
