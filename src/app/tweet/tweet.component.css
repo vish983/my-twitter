@@ -1,0 +1,11 @@
+
+.tweetitem{
+        border-radius: 50%;
+        border: none;
+        background-color: none !important;
+        background: none !important;
+        color: #828586;
+        transition: all .3s ease-in-out;
+        height:40px;
+        width: 40px;
+}

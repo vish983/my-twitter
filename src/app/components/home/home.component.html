@@ -1,1 +1,11 @@
-<p class="textSize">home works!</p>
+<div class="row mx-0">
+    <div class="col-12 mb-3 border-top border-bottom">
+       <app-create-tweet></app-create-tweet>
+    </div>
+    <div class="col-12  border-bottom bg-light" *ngFor="let item of myArray; let i = index; let even = even; let odd=odd">
+        <div class="">
+            <app-tweet [post]="item" [hasPhoto]="i%3===0 ? true: false" [from]="'home'"></app-tweet>
+        </div>
+    </div>
+</div>
+

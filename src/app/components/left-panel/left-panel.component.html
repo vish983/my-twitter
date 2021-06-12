@@ -1,12 +1,26 @@
-<div class="row mx-0">
-    <div class="col-12">
-        <div class="row mx-0">
-            <div class="col-3">
-                <img src="../../../assets/images/user.png" class="img-thumbnail" alt="invalid photo">
-            </div>
-        </div>
-    </div>
+<div class="row mx-0 pl-3 pl-xl-5">
     <div class="col-12" *ngFor="let item of navigationArray">
-        <button type="button" class=" btn w-100 buttondesign">{{item.name}}</button>
+        <a href="" routerLink="/{{item.urlname}}" routerLinkActive="text-danger">
+            <button  mat-button class="buttondesign"> 
+                <i class="fa fa-{{item.icon}} mr-3"></i> {{item.name}}
+            </button>
+        </a>
+    </div>
+    <!-- <div class="col-12">
+        <button mat-button class="buttondesign" [matMenuTriggerFor]="aboveMenu"> <i class="fa fa-ellipsis-h mr-3"></i>More</button>
+            <mat-menu #aboveMenu="matMenu" yPosition="above">
+                <button mat-menu-item>Item 1</button>
+                <button mat-menu-item>Item 2</button>
+            </mat-menu>
+    </div> -->
+    <div class="col-12 mt-5">
+        <a href="" routerLink = "/profile">
+            <button  class="btn d-flex probutton">
+                <div><img width="50" class="img-fluid" src="../../../assets/images/user.png" alt=""></div>
+                <div>
+                    <div>Vishal Kumar</div>
+                    <div class="text-muted"> @vishal </div>
+                </div> 
+             </button></a>
     </div>
 </div>

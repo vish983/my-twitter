@@ -1,0 +1,24 @@
+.listitem{
+    list-style: none;
+}
+.tweetitem{
+    border-radius: 50%;
+    border: none;
+    background-color: none !important;
+    background: none !important;
+    color: #1DA1F2;
+    transition: all .3s ease-in-out;
+    height:40px;
+    width: 40px;
+}
+.tweetitem:hover{
+    background-color: #85ccf8 !important;
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.tweetbutton{
+    background-color:#1DA1F2 ;
+    color: white;
+    border-radius: 20px;
+    width: 70%;
+}
