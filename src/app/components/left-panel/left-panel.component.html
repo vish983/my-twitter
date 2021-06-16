@@ -14,13 +14,14 @@
             </mat-menu>
     </div> -->
     <div class="col-12 mt-5">
-        <a href="" routerLink = "/profile">
+        <a href="" routerLink="/profile/{{user.id}}">
             <button  class="btn d-flex probutton">
                 <div><img width="50" class="img-fluid" src="../../../assets/images/user.png" alt=""></div>
                 <div>
-                    <div>Vishal Kumar</div>
-                    <div class="text-muted"> @vishal </div>
+                    <div>{{user.name}}</div>
+                    <div class="text-muted"> {{user.username}} </div>
                 </div> 
-             </button></a>
+             </button>
+        </a>
     </div>
 </div>

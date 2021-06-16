@@ -1,0 +1,55 @@
+<div class="row mx-0">
+    <div class="col-12 coverImg px-0">
+        <!-- <img class="coverImg" src="../../../assets/images/manimage.jpg" alt=""> -->
+    </div>
+    <div class="col-12">
+        <div class="row mx-0">
+            <div class="col-6 profilepic   px-0">
+               <img class="profilepic2 " src="../../../assets/images/manimage.jpg" alt="">
+            </div>
+            <div class="col-6 text-right  mt-3">
+                <button class="tweetbutton">Edit profile</button>
+            </div>
+            <div class="col-12">
+                <div style="font-weight: 600; font-size: 20px;">{{profileData.name}}</div>
+            </div>
+            <div class="col-12">
+                <div class="text-muted">{{profileData.username}}</div>
+            </div>
+            <div class="col-12">
+                    <h3>Hello !!!!!!!!!!!!!!!!!!!!</h3>
+            </div>
+            <div class="col-12" >
+                <ul class="list-inline" >
+                    <li class="list-inline-item mr-4" *ngFor="let loco of location" ><i class="fa fa-{{loco.icon}}"></i> {{loco.name}}</li>
+                </ul>
+            </div>
+            <div class="col-12 px-0" *ngIf="profileData">
+                <mat-tab-group>
+                    <mat-tab label="Tweets">
+                        <ng-template matTabContent>
+                            <app-user-tweets [id]="profileData.id"></app-user-tweets>
+                        </ng-template>
+                    </mat-tab>
+                    <mat-tab label="Tweets & replies">
+                        <ng-template matTabContent>
+                            <app-user-replies  [id]="profileData.id"></app-user-replies>
+                        </ng-template>
+                         </mat-tab>
+                    <mat-tab label="Media">
+                            <ng-template matTabContent>
+                                 <app-user-media  [id]="profileData.id"></app-user-media>
+                            </ng-template>
+                        </mat-tab>
+                    <mat-tab label="Likes">
+                       <ng-template matTabContent>
+                            <app-user-likes  [id]="profileData.id"></app-user-likes>
+                       </ng-template>
+                        
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -14,4 +14,15 @@ export class ApiService {
   getAllPost = () => {
     return this.http.get('https://jsonplaceholder.typicode.com/posts');
   }
+
+  // getting posts
+  getPost = (id: number) => {
+    return this.http.get('https://jsonplaceholder.typicode.com/posts/' + id);
+  }
+  getAllAlbum = () => {
+    return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  }
+  getAllphotos = () => {
+    return this.http.get('https://jsonplaceholder.typicode.com/photos');
+  }
 }

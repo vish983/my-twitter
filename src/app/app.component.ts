@@ -16,11 +16,7 @@ export class AppComponent implements OnInit {
   user: any;
   currentUrl: any;
   constructor(private router: Router, private apiService: ApiService, private local: LocalStorageService) {
-    if (this.isAuthorisedUser) {
 
-    } else {
-      this.router.navigate(['/login']);
-    }
   }
   ngOnInit(): void {
 
@@ -31,14 +27,14 @@ export class AppComponent implements OnInit {
 
     if (Object.keys(this.local.getDataFromLocal('authUser')).length > 0) {
       this.isAuthorisedUser = true;
-      this.router.navigate(['/home']);
+      // this.router.navigate(['/home']);
 
       // extracting url
     } else {
       if (Object.keys(this.local.getDataFromLocal('users')).length === 0) {
         this.apiService.allUser().subscribe(data => {
           this.user = data;
-          this.local.setDataToLocal('users', data);
+          this.local.setDataToLocal('users', this.user);
           this.isAuthorisedUser = false;
           this.router.navigate(['/login']);
         });

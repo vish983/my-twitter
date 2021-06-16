@@ -7,7 +7,6 @@ import { LocalStorageService } from './local-storage.service';
 export class DataService {
 
   constructor(private localService: LocalStorageService) { }
-
   validateUser = (user: any) => {
     const allUsers: any[] = this.localService.getDataFromLocal('users');
     const foundUser = allUsers.find(item => item.username === user.username);
@@ -18,4 +17,5 @@ export class DataService {
       return false;
     }
   }
+
 }

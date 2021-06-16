@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.apiservice.getAllPost().subscribe((res) => {
       this.myArray = res;
+      this.myArray = this.myArray.sort( () => .5 - Math.random() );
     });
   }
-
 }

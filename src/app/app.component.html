@@ -1,32 +1,45 @@
 
 <div class="row mx-0" *ngIf="isAuthorisedUser"> 
-   <div class="col-12 bg-white" style="position: sticky;top:0;z-index: 10;">
-       <div class="row mx-0">
-        <div class="col-3 py-3 pl-xl-5">
-            <i class="fa fa-twitter fa-2x pl-4 ml-3 brand-text"></i>
-        </div>
-        <div class="col-6 p-3 text-left home px-0 border">
-            <span class="pl-3 text-capitalize">{{currentUrl}}</span>
-         </div>
-        <div class="col-3">
-            <i class="fa fa-search position-absolute text-secondary mt-4 fa-lg ml-2 pt-1"></i>
-            <input class="my-1 pl-5 pr-2 py-2 border" style="border-radius: 20px;" placeholder="Search" />
-        </div>
-       </div>
-   </div>
-   <div class="col-12">
-       <div class="row mx-0" >
-        <div class="col-3">
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav [mode]="'over'" style="max-width: 250px;padding: 25em 0;">
+            <!-- side nav data -->
             <app-left-panel></app-left-panel>
-        </div>
-        <div class="col-6 px-0 border-left border-right">
-            <router-outlet></router-outlet>
-        </div>
-        <div class="col-3">
-            <app-right-panel></app-right-panel>
-        </div>
-       </div>
-   </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <!-- main pages -->
+            <div class="col-12 bg-white px-0" style="position: sticky;top:0;z-index: 10;">
+                <div class="row mx-0">
+                    <div class="col-3 d-none d-lg-block py-3 pl-xl-5">
+                        <i class="fa fa-twitter fa-2x pl-4 ml-3 brand-text"></i>
+                    </div>
+                    <div class="col-12 col-lg-6 p-3 text-left home px-0 border">
+                        <button class="d-lg-none" (click)="sidenav.toggle()" mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+                            <mat-icon>menu</mat-icon>
+                        </button>
+                        <span class="pl-3 text-capitalize">{{currentUrl}}</span>
+                    </div>
+                    <div class="col-3 d-none d-lg-block">
+                        <i class="fa fa-search position-absolute text-secondary mt-4 fa-lg ml-2 pt-1"></i>
+                        <input class="my-1 pl-5 pr-2 py-2 border" style="border-radius: 20px;" placeholder="Search" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 px-0">
+                <div class="row mx-0" >
+                    <div class="col-3 d-none d-lg-block">
+                        <app-left-panel></app-left-panel>
+                    </div>
+                    <div class="col-12 col-lg-6 px-0 border-left border-right">
+                        <router-outlet></router-outlet>
+                    </div>
+                    <div class="col-3 d-none d-lg-block">
+                        <app-right-panel></app-right-panel>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
 <div class="row mx-0" *ngIf="!isAuthorisedUser">
     <div class="col-12 px-0">

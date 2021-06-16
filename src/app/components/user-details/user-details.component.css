@@ -1,0 +1,33 @@
+.coverImg{
+    background-image: url(../../../assets/images/mountain.jpg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    width: 100%;
+
+    
+}
+.profilepic{
+    margin-top: -75px;
+}
+.profilepic2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: solid 5px white;
+    
+}
+.tweetbutton{
+    width: 130px;
+    color:#1DA1F2 ;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid  #1DA1F2;
+    border-radius: 30px;
+    height: 40px;
+
+    
+}
