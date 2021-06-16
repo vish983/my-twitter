@@ -1,0 +1,12 @@
+<div class="row mx-0">
+    <div class="col-4 mt-4 mb-4 " *ngFor="let item of userAlbum">
+        <div class="border clickable" (click)="openAlbum()"  style="min-height: 150px;">
+            <div class="border-bottom p-2 bg-light">
+                Album ID - {{item.id}}
+            </div>
+            <div class="p-3">
+                {{item.title}}
+            </div>
+        </div>
+    </div>
+</div>

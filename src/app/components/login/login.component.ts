@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private local: LocalStorageService, private dataService: DataService, private router: Router) {
     if (Object.keys(this.local.getDataFromLocal('authUser')).length > 0) {
-      this.router.navigate(['/'])
+      this.router.navigate(['/']);
     }
   }
 
@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
 
   onSubmitHandler = () => {
     const user = {
-      username: this.loginPage.controls['username'].value,
-      pass: this.loginPage.controls['password'].value,
+      username: this.loginPage.controls.username.value,
+      pass: this.loginPage.controls.password.value,
     };
     const flag = this.dataService.validateUser(user);
     if (flag) {

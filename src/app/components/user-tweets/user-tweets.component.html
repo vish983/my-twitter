@@ -1,0 +1,5 @@
+<div class="row mx-0 my-2" *ngIf="postDataArray">
+    <div class="col-12">
+        <app-tweet [post]="item" *ngFor="let item of postDataArray"></app-tweet>
+    </div>
+</div>

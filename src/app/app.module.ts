@@ -7,21 +7,20 @@ import { LeftPanelComponent } from './components/left-panel/left-panel.component
 import { RightPanelComponent } from './components/right-panel/right-panel.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostComponent } from './components/post/post.component';
-import { UserComponent } from './components/user/user.component';
 import { AlbumComponent } from './components/album/album.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {ReactiveFormsModule} from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatButtonModule} from '@angular/material/button';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule} from '@angular/forms';
+import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule} from '@angular/material/divider';
 import { HttpClientModule } from '@angular/common/http';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule} from '@angular/material/menu';
 import { ExploreComponent } from './components/explore/explore.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { MessageComponent } from './components/message/message.component';
@@ -30,8 +29,17 @@ import { ListComponent } from './components/list/list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TweetComponent } from './tweet/tweet.component';
 import { CreateTweetComponent } from './create-tweet/create-tweet.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatIconModule} from '@angular/material/icon';
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { IndividualTweetComponent } from './components/individual-tweet/individual-tweet.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { MatTabsModule} from '@angular/material/tabs';
+import { UserTweetsComponent } from './components/user-tweets/user-tweets.component';
+import { UserRepliesComponent } from './components/user-replies/user-replies.component';
+import { UserMediaComponent } from './components/user-media/user-media.component';
+import { UserLikesComponent } from './components/user-likes/user-likes.component';
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -41,7 +49,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RightPanelComponent,
     HomeComponent,
     PostComponent,
-    UserComponent,
     AlbumComponent,
     LoginComponent,
     SignupComponent,
@@ -53,7 +60,13 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ListComponent,
     ProfileComponent,
     TweetComponent,
-    CreateTweetComponent
+    CreateTweetComponent,
+    IndividualTweetComponent,
+    UserDetailsComponent,
+    UserTweetsComponent,
+    UserRepliesComponent,
+    UserMediaComponent,
+    UserLikesComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +83,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatMenuModule,
     MatIconModule,
     MatProgressSpinnerModule,
-  
+    MatTabsModule,
+    MatDialogModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
