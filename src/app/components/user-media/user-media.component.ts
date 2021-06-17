@@ -23,11 +23,11 @@ export class UserMediaComponent implements OnInit {
       console.log(this.userAlbum);
     });
   }
-  openAlbum = () => {
+  openAlbum = (item: any) => {
     const dialogref = this.dialoge.open(AlbumComponent, {
       width: '500px',
       height: '500px',
-      data: { firstname: 'vishal', lastname: 'kumar', id: this.id, album: this.userAlbum }
+      data: { firstname: 'vishal', lastname: 'kumar', id: this.id, album: item }
     });
   }
 

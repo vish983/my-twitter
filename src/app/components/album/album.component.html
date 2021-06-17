@@ -1,5 +1,5 @@
 <div class="row mx-0">
-    <div class="col-12">
-        <h1>{{data.id}}Hello photos in album</h1>
+    <div class="col-4 my-2 px-2"  *ngFor="let item of userAlbum">
+        <img [src]="item.url" class="img-fluid" />
     </div>
 </div>
