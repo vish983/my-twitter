@@ -21,16 +21,17 @@ a{
   border-radius: 30px;
 }
 .probutton{
-  
+  border: 0px solid rgb(168, 166, 166);
+
   border-radius: 30px;
   padding: 5px 35px 5px 12px;
   width: 250px;
 }
 .probutton:hover{
-  /* background-color: #1da1f238; */
+  background-color: #ccedf1;
   box-shadow: 
-  inset 2px 2px 4px #575858,
-  inset -3px -3px 12px #fafbfc ;
+  inset 2px 2px 3px #575858,
+  inset -3px -3px 7px #fafbfc;
 }
 /* .img{
   height: 100px;

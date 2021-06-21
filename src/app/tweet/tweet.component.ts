@@ -9,7 +9,7 @@ import { LocalStorageService } from '../services/local-storage.service';
 })
 export class TweetComponent implements OnInit {
  resButton = ['comment-o', 'retweet', 'heart-o', 'share-square-o'];
-
+// @Input call from home
   @Input() post: any; // title, desc, id, userId
   @Input() hasPhoto: any;
   @Input() from: any;
@@ -24,6 +24,10 @@ export class TweetComponent implements OnInit {
   }
   goToProfile = () => {
     this.router.navigate(['/profile/' + this.post.userId]);
+  }
+  goToComment = (i: any) => {
+    const comment = this.resButton.filter( a => a === i);
+    console.log(comment);
   }
 
 }

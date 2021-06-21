@@ -15,7 +15,6 @@ export class LeftPanelComponent implements OnInit {
     {name: 'Message', urlname: 'message', icon: 'envelope-o'},
     {name: 'Bookmark', urlname: 'bookmark', icon: 'bookmark-o'},
     {name: 'List', urlname: 'list', icon: 'list-alt'},
-    {name: 'Profile', icon: 'user-o'},
 
   ];
 

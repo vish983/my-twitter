@@ -8,6 +8,8 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class IndividualTweetComponent implements OnInit {
   postDetail: any = null;
+  allComment: any;
+  userComment: any;
   item: any;
   constructor(private apiservice: ApiService) { }
 
@@ -16,7 +18,17 @@ export class IndividualTweetComponent implements OnInit {
     this.apiservice.getPost(id).subscribe(res => {
       this.postDetail = res;
       console.log(this.postDetail);
+
+      // call the comment
+
+      this.apiservice.getAllComments().subscribe(res => {
+        this.allComment = res;
+        const comment = this.allComment.filter((temp: { postId: any; }) => temp.postId === this.postDetail.id);
+        this.userComment = comment;
+        console.log(this.userComment);
+      });
     });
+
   }
 
 }
