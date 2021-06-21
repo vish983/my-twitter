@@ -1,1 +1,22 @@
-<app-tweet *ngIf="postDetail" [post]="postDetail" [hasPhoto]="true" [from]="'individualTweet'"></app-tweet>
+<div class="row mx-0">
+    <div class="col-12 px-0">
+        <app-tweet *ngIf="postDetail" [post]="postDetail" [hasPhoto]="true" [from]="'individualTweet'"></app-tweet> 
+    </div>
+</div>
+<div class="row mx-0 mt-4" *ngFor="let item of userComment">
+    <div class="col-2">
+        <img class=" rounded-circle" width="70" height="70" src="../../../assets/images/manimage.jpg" title="{{item.id}}" alt="">
+    </div>
+    <div class="col-9 px-0 mt-3 bg-light">
+        <div class="row mx-0">
+            <div class="col-12 px-0 border-bottom">
+                <div class="text-capitalize"><b>{{item.name}}</b></div>
+                <div class="text-muted">{{item.email}}</div>
+            </div>
+            <div class="col-12 px-0 mt-3">
+                {{item.body}}
+            </div>
+        </div>
+    </div>
+</div>
+

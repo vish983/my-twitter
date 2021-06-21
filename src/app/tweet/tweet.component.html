@@ -20,10 +20,10 @@
                         <p> {{post.body}}</p>
                     </div>
                 </div>
-                <div class="col-3 pt-2" *ngFor="let res of resButton" >
-                    <button type="button" class="tweetitem"><i class="fa fa-{{res}}"></i></button>
+                <div class="col-3 pt-2" *ngFor="let res of resButton"  >
+                    <button type="button" class="tweetitem" (click)="goToComment(res)" ><i class="fa fa-{{res}}"></i></button>
                 </div>
          </div>
         </div>
     </div>
-</div>
+</div>      
